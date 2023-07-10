@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>RESUME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        h3,
+        .grid_container {
+            cursor: pointer;
+        }
+        h3 {
+            display: none;
+            text-align: center;
+            border: 1px solid white;
+            padding: 10px;
+            margin: 90px auto;
+            max-width: 80%;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            h3 {
+                display: block;
+            }
+            .grid_container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a> </li>
+                    <li><a href="cv.html">RESUME</a> </li>
+                    <li><a href="about.html">INTERESTS</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cv">
+            <img src="vebsliki/intro.webp">
+            <p>With excellent communication and organization skills, I have proven my ability to effectively convey ideas and coordinate tasks. As a co-leader of the Shared Knowledge wiki club, I've successfully organized and conducted several workshops with over 50 students, demonstrating my capacity to lead and engage large groups. Through my involvement with the Volunteers Center Skopje, I have delivered speeches on environmental and social issues, showcasing my passion for making a positive impact.
+                My participation in Erasmus+ projects and tourism-related internships has provided me with extensive cultural exchange experience, highlighting my adaptability and cross-cultural communication skills. Complementing these experiences, my university classes and active participation in webinars have equipped me with substantial business knowledge, particularly in the realms of marketing and management. My enthusiasm for business and marketing is further evident through my involvement in a marketing internship, where I have gained practical experience and honed my skills in the field.</p>
+            <h3 id="toggleGrid">Education and Internships</h3>
+        </div>
+
+        <div class="grid_container">
+            <div class="grid_item">
+                <h2>October 2022 - Present</h2>
+            </div>
+            <div class="grid_item">
+                <p>A first-year student in the first cycle of studies at the University "St. Cyril and Methodius" in Skopje, at the Faculty of Computer Science and Engineering (FCSE) - Direction: Application of information technology</p>
+            </div>
+            <div class="grid_item">
+                <h2>June 2019 - September 2019</h2>
+            </div>
+            <div class="grid_item">
+                <p>Intern at Pinnacle Surge Media -  Actively conducted lead generation activities, employing targeted marketing campaigns and strategic outreach to identify and attract potential customers, nurturing them through the sales funnel for increased conversions and business growth.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleGrid = document.getElementById('toggleGrid');
+            var gridContainer = document.querySelector('.grid_container');
+
+            toggleGrid.addEventListener('click', function() {
+                toggleGrid.style.display = 'none';
+                gridContainer.style.display = 'grid';
+            });
+
+            gridContainer.addEventListener('click', function() {
+                toggleGrid.style.display = 'block';
+                gridContainer.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

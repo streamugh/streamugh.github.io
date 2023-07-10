@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="cv.html">RESUME</a></li>
+                <li><a href="about.html">INTERESTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="contactForm">
+        <div class="flexi">
+            <h2>If you have any questions or just want to get in touch,<br>feel free to fill out the form.</h2>
+            <br><img src="vebsliki/contact.png">
+        </div>
+        <div class="flexi">
+            <h2>Contact Me</h2><br>
+            <form id="myForm" action="https://formspree.io/teodora.veljanoska@students.finki.ukim.mk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="confirmationMessage" style="display: none;">
+                Thank you for your submission!
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('myForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            confirmationMessage.style.display = 'block';
+            form.reset();
+        });
+    </script>
+</section>
+</body>
+</html>
